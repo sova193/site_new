@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Автосервис группы SOVa</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="..\css\style.css">
 </head>
 <body>
     <header class="header">
@@ -18,17 +18,102 @@
     <main>
         <div class="container">
             <h1>Автосервис группы SOVa</h1>
-            <h2>Про меня</h2>
-            <p>Меня зовут Олег. Я работаю <strong>надзирателем в инженерной геологии</strong>. Решил получше узнать смежную профессию, чтобы разобраться как устроен веб.</p>
-            <p>Живу в Воронеже. Люблю кататься на BMW.</p>
-            <h2>Чему я хочу научиться</h2>
-            <p>На <em>этом</em> курсе я хотел бы научиться создавать сайты с нуля.</p>
+            <h2>Заявка на тех. осмотр</h2>
+            <form>
+                <fieldset>
+                    <legend>Опишите свой автомобиль</legend>
+                        Марка автомобиля <input type="text" name="trademark" placeholder="Укажите марку авто" required="required">
+                        <br>
+                        <br>
+                        Модель <input type="text" name="model" placeholder="Укажите модель" required="required">
+                        <br>
+                        <p>Коробка передач</p>
+                        АКПП <input type="radio" name="gear" value="auto" checked>
+                        МКПП <input type="radio" name="gear" value="hand">
+                        <br>
+                        <br>
+                        Выберете тип ТО:
+                        <br>
+                        <input type="checkbox" name="type1" value="to1"> ТО1
+                        <input type="checkbox" name="type2" value="to2"> ТО2
+                        <input type="checkbox" name="type3" value="to3"> ТО3
+                        <br>
+                        <br>
+                        Дополнительно необходимо проверить:
+                        <br>
+                        <input type="checkbox" name="type4" value="brake"> Уровень тормозной жидкости<br>
+                        <input type="checkbox" name="type5" value="paralel"> Сход/Развал<br>
+                        <input type="checkbox" name="type6" value="coolant"> Уровень охраждающей жидкости<br>
+                        <input type="checkbox" name="type5" value="suspention"> Техническое состояние подвески<br>
+                        <input type="checkbox" name="type6" value="oil"> Смена масла в двигателе на другого производителя<br>
+                        <br>
+                        Какого производителя масло для вас предпочтительнее?:
+                        <select name="oillist">
+                            <option label=""></option>
+                            <option label="Motul">Motul</option>
+                            <option label="Shell">Shell</option>
+                            <option label="Castrol">Castrol</option>
+                            <option label="Rolf">Rolf</option>
+                            <option label="Oleina" disabled>Oleina</option>
+                        </select>
+                        <br>
+                        <br>
+                        <br>
+                        Дополнительно можем покрасить супорта.<br>
+                        Нужна такая опция, выберете цвет:<br>
+                        <input type="color" list="colorlist" value="#cc0000">
+                        <datalist id="colorlist">
+                            <option value="#ff0000" label="Красный"></option>
+                            <option value="#008000" label="Зеленый"></option>
+                            <option value="#ffd700" label="Желтый"></option>
+                            <option value="#0000ff" label="Синий"></option>
+                            <option value="#ffffff" label="Белый"></option>
+                            <option value="#000000" label="Черный"></option>
+                            <option value="#cccccc" label="Серый"></option>
+                        </datalist>
+                        <br>
+                        Выберете дату визита на ТО:
+                        <input type="date" name="visit" value="2023-12-25" min="2023-12-27" max="2024-01-15">
+                        <br>
+                        <br>
+                        Укажите ваш E-Mail
+                        <br>
+                        <input type="email" name="mail" placeholder="user@domen.ru">
+                        <br>
+                        <br>
+                        Ваш телефон для связи
+                        <br>
+                        <input type="tel" name="phone" placeholder="+7-ххх-хх-хх"><br>
+                        <br>
+                        <input type="submit" value="Записаться">
+                        <input type="reset" value="Очистить поля">
+                </fieldset>
+                <p>Прогресс тех. осмотра</p>
+                <progress value="20" max="100"></progress><br>
+                <fieldset>
+                    <legend>Обратная связь</legend>
+                    Оцените качество услуг
+                    <br>
+                    <input type="range" min="0" max="10" step="1" value="8"><br>
+                    Что бы хотелось улучшить?<br>
+                    <textarea name="commit" id="" cols="30" rows="7" placeholder="Ваши пожелания"></textarea>
+                    <br>
+                    Порекомендуете наш сервис?
+                    <label for="yes">Да</label>
+                    <input type="radio" id="yes" name="choise" value="yes" checked>
+                    <label for="no">Нет</label>
+                    <input type="radio" id="no" name="choise" value="no"><br>
+                    <input type="submit" value="Отправить">
+                </fieldset>
+            </form>
+
+            <p>Всем владельцам стволов смотреть<b><em> этот </em></b> ролик.</p>
             <iframe width="308" height="170" src="https://www.youtube.com/embed/zjv2HURxAug?si=iosGNf8yl7SifkMz" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
         </div>
     </main>
     <footer class="footer">
         <div class="footer-block">
-            <p> class="footer-text">&copy;&nbsp;SOVa Group</p>
+            <p class="footer-text">&copy;&nbsp;SOVa Group</p>
         </div>
     </footer>
 </body>

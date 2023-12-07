@@ -1,23 +1,34 @@
 <!DOCTYPE html>
 
-<html>
+<html xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="utf-8">
-    <title>О нас - Моя не первая веб-страница</title>
+    <title>О нас</title>
+    <link rel="stylesheet" type="text/css" href="..\css\style.css">
 </head>
 <body>
-    <header>
-        <img width="50" height="50" src="../images/OWL_Head.jpg" alt="SOVa Laybel">
-        <a href="index.html"><b><em>Главная</em></b></a>
-        <a href="#"><b><em>О нас</em></b></a>
-        <a href="contacts.html"><b><em>Контакты</em></b></a>
+    <header class="header">
+        <div class="container">
+            <img width="50" height="50" src="../images/OWL_Head.jpg" alt="SOVa Laybel">
+            <a href="index.html"><b><em>Главная</em></b></a>
+            <a href="#"><b><em>О нас</em></b></a>
+            <a href="contacts.html"><b><em>Контакты</em></b></a>
+        </div>
     </header>
     <main>
-        <h1>О нас</h1>
-        <p>Мы лучшие в своем деле. Покупайте слонов у нас!</p>
+        <div class="container">
+            <h1 style="font-size: 32px; color: red">О нас</h1>
+            <p><ol type="I">
+                <li style="color: green">Мы лучшие в своем деле. Покупайте слонов у нас!</li>
+                <li>У нас самое передовое оборудование.</li>
+                <li>Работают только высококвалифицированные специалисты.</li>
+            </ol>
+        </div>
     </main>
-    <footer>
-            <span>&copy;&nbsp;Skillfactory</span>
+    <footer class="footer">
+        <div class="footer-block">
+            <p class="footer-text">&copy;&nbsp;SOVa Group</p>
+        </div>
     </footer>
 </body>
 </html>
